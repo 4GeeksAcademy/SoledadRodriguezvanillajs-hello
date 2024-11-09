@@ -20,14 +20,31 @@ window.onload = function() {
       "while I was praying"
     ];
 
-    let numwho = Math.floor(Math.random() * who.length);
+    let numWho = Math.floor(Math.random() * who.length);
+    console.log(numWho);
+    let randomWho = who[numWho];
+    console.log(randomWho);
 
-    let randomWho = [who.find(numwho)];
+    let numAction = Math.floor(Math.random() * action.length);
+    console.log(numAction);
+    let randomAction = action[numAction];
+    console.log(randomAction);
+
+    let numWhat = Math.floor(Math.random() * what.length);
+    console.log(numWhat);
+    let randomWhat = what[numWhat];
+    console.log(randomWhat);
+
+    let numWhen = Math.floor(Math.random() * when.length);
+    console.log(numWhen);
+    let randomWhen = when[numWhen];
+    console.log(randomWhen);
+
+    return randomWho + " " + randomAction + " " + randomWhat + " " + randomWhen;
   }
-  console.log(generarExcusas());
+
+  let randomText = generarExcusas();
 
   let paragraph = document.getElementById("excuse");
-  paragraph.innerText = "randomText";
-
-  console.log("Hello Rigo from the console!");
+  paragraph.innerText = randomText;
 };
